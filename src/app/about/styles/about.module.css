@@ -1,0 +1,160 @@
+/* Container for the entire page, handles scroll snapping */
+.container {
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    height: 100vh;
+}
+
+/* General slide container */
+.slide {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 6rem 10%;
+    min-height: 100vh;
+    scroll-snap-align: start;
+    gap: 3rem;
+}
+
+/* Slide with two columns (universities/professional experience) */
+.twoColumns {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Text container inside a slide */
+.text {
+    flex: 1;
+}
+
+/* Slide title */
+.text h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+/* Slide subtitle */
+.text .subtitle {
+    font-size: 1rem;
+    color: #999;
+    margin-bottom: 2rem;
+    font-weight: 300;
+}
+
+/* Paragraph text */
+.text p {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    color: #444;
+}
+
+/* Wrapper for images in slides */
+.imageWrap {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+/* Image styling with optional modifier for bigger images */
+.imageWrap img {
+    width: 250px;
+    height: 100%;
+    border-radius: 0%;
+    object-fit: cover;
+}
+
+.imageWrap img.aboutMe {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+
+/* Slide with image on the right */
+.imageRight {
+    flex-direction: row-reverse;
+}
+
+/* Container for multiple university/professional blocks */
+.universities {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    width: 100%;
+}
+
+/* Single university/professional block */
+.university {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+/* Reverse layout if image should be on the right */
+.university.imageRight {
+    flex-direction: row-reverse;
+}
+
+/* Text section inside a university/professional block */
+.uniText {
+    flex: 2;
+}
+
+/* University/professional name */
+.uniName {
+    font-weight: bold;
+    font-size: 1.4rem;
+    margin-bottom: 0.3rem;
+}
+
+/* Degree or position + period */
+.uniDegree {
+    font-size: 1rem;
+    font-weight: 300;
+    color: #6a0dad; /* purple */
+    margin-bottom: 0.5rem;
+}
+
+/* List of topics or responsibilities */
+.uniText ul {
+    list-style: disc;
+    padding-left: 1.5rem;
+    line-height: 1.6;
+}
+
+/* Individual bullet item */
+.uniText ul li {
+    font-size: 1.1rem;
+    color: #444;
+}
+
+/* Container for social icons below About Me image */
+.socialIcons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    justify-content: center; /* centraliza abaixo da imagem */
+  }
+  
+  /* Icon styles */
+  .socialIcons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #6a0dad; /* violet */
+    color: #fff;
+    font-size: 1.5rem;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .socialIcons a:hover {
+    background-color: #4b0082; /* darker purple */
+    transform: translateY(-3px);
+  }

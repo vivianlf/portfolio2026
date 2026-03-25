@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import styles from './Header.module.css';
+import styles from './header.module.css';
 
 type Lang = 'en' | 'fr' | 'pt';
 
