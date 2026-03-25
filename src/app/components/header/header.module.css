@@ -1,0 +1,123 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 3rem;
+  border-bottom: 0.5px solid #e5e5e5;
+}
+
+.logoWrap {
+  position: relative;
+  cursor: default;
+  height: 32px;
+  display: flex;
+  align-items: center;
+}
+
+.logoVf {
+  font-family: 'DM Serif Display', serif;
+  font-size: 22px;
+  letter-spacing: 0.04em;
+  color: #111;
+  position: absolute;
+  left: 0;
+  white-space: nowrap;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.logoFull {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #111;
+  position: absolute;
+  left: 0;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.logoWrap:hover .logoVf {
+  opacity: 0;
+  transform: translateY(-4px);
+}
+
+.logoWrap:hover .logoFull {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.navRight {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.navMenu {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.navMenu a {
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #111;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 2px;
+}
+
+.navMenu a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0.5px;
+  background: #111;
+  transition: width 0.3s ease;
+}
+
+.navMenu a:hover::after,
+.navMenu a.active::after {
+  width: 100%;
+}
+
+.langSwitcher {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.langBtn {
+  background: none;
+  border: none;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #aaa;
+  cursor: pointer;
+  padding: 2px 4px;
+  transition: color 0.2s;
+}
+
+.langBtn.active {
+  color: #111;
+  font-weight: 500;
+}
+
+.langBtn:hover {
+  color: #111;
+}
+
+.langSep {
+  color: #ddd;
+  font-size: 10px;
+}
