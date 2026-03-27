@@ -15,6 +15,7 @@
     height: auto;
     scroll-snap-align: start;
     gap: 0rem;
+    background-color: #fff;
 }
 
 /* Slide with two columns (universities/professional experience) */
