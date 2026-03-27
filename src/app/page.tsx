@@ -1,65 +1,129 @@
-import Image from "next/image";
+'use client';
+import AboutMeSlide from './about/components/aboutMe';
+import BlockSlide from './about/components/aboutBlock';
+import styles from './styles/about.module.css';
+import profile from '../../../public/photoCV.jpg';
+import unifei from '../../../public/Logo UNIFEI.png';
+import utc from '../../../public/Logo UTC.svg';
+import { FaEnvelope, FaPhone, FaLinkedin } from 'react-icons/fa';
+import { useLang } from './context/langContext';
+import content from './about/data/aboutContent.json';
 
-export default function Home() {
+export default function About() {
+  const { lang } = useLang();
+
+  const clients = [
+    {
+      name: "Speed Capital",
+      bg: "linear-gradient(135deg, #03377B 0%, #416BB3 100%)",
+      logo: "/Speed-Capital.webp",
+    },
+    {
+      name: "Serra do Amolar",
+      bg: "linear-gradient(135deg, #034a70 0%, #42789e 50%, #78bde3 100%)",
+      logo: "/Serra-do-Amolar.png",
+      link: "https://serradoamolar.com.br/"
+    },
+    {
+      name: "Montax Inteligência",
+      bg: "#ff811a",
+      logo: "/Montax.webp",
+      link: "https://montaxbrasil.com.br/"
+    },
+    {
+      name: "Komex Trading",
+      bg: "linear-gradient(135deg, #a7f3d0 0%, #17b9b0 45%, #60a5fa 100%)",
+      logo: "/komex-trading.webp",
+      link: "https://komex.com.br/"
+    }
+  ];
+
+  const aboutMe = content.aboutMe[lang];
+  const freelancer = content.freelancer[lang];
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main className={styles.container}>
+
+      {/* Slide 1: About Me */}
+      <AboutMeSlide
+        title={aboutMe.title}
+        text={aboutMe.text}
+        image={profile.src}
+        imageClass={styles.aboutMe}
+      >
+        <div className={styles.socialIcons}>
+          <a href="mailto:vivianleitef@gmail.com"><FaEnvelope /></a>
+          <a href="tel:+33767897446"><FaPhone /></a>
+          <a href="https://www.linkedin.com/in/vivian-fragoso-71101321a" target="_blank" rel="noreferrer"><FaLinkedin /></a>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </AboutMeSlide>
+
+      {/* Slide 2: Academic Background */}
+      <BlockSlide
+        title={content.academic[lang].title}
+        blocks={content.blocks.academic[lang].map((b: any, i: number) => ({
+          ...b,
+          image: i === 0 ? utc.src : unifei.src,
+          imageRight: true
+        }))}
+      />
+
+      <div className={styles.sectionDivider} />
+
+      {/* Slide 3: Professional Experience */}
+      <BlockSlide
+        title={content.experience[lang].title}
+        blocks={content.blocks.experience[lang]}
+      />
+
+      {/* Slide 4: Freelancer */}
+      <section className={styles.freelancerSlide}>
+
+        <div className={styles.freelancerText}>
+          <span className={styles.freelancerTag}>{freelancer.tag}</span>
+
+          <div className={styles.titleWrapper}>
+            <h2 dangerouslySetInnerHTML={{ __html: freelancer.title }} />
+          </div>
+
+          <p dangerouslySetInnerHTML={{ __html: freelancer.text1 }} />
+          <p dangerouslySetInnerHTML={{ __html: freelancer.text2 }} />
         </div>
-      </main>
-    </div>
+
+        <div className={styles.freelancerCards}>
+          {clients.map((client, index) => (
+            <a
+              key={index}
+              href={client.link || "#"}
+              target="_blank"
+              rel="noreferrer"
+              className={styles.clientCard}
+            >
+              <div
+                className={styles.clientBackground}
+                style={{
+                  background:
+                    client.bg.startsWith("linear-gradient") ||
+                    client.bg.startsWith("radial-gradient") ||
+                    client.bg.startsWith("#") ||
+                    client.bg.startsWith("rgb")
+                      ? client.bg
+                      : `url(${client.bg}) center/cover no-repeat`
+                }}
+              />
+              <div className={styles.clientContent}>
+                <img
+                  src={client.logo}
+                  alt={client.name}
+                  className={styles.clientLogo}
+                />
+              </div>
+            </a>
+          ))}
+        </div>
+
+      </section>
+
+    </main>
   );
 }
