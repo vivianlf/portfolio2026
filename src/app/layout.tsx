@@ -4,8 +4,8 @@ import Footer from './components/footer/footer';
 import { LangProvider } from './context/langContext';
 
 export const metadata = {
-  title: 'Meu Portfólio',
-  description: 'Portfólio da Vivian',
+  title: 'Vivian Fragoso',
+  description: 'Portfolio',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
