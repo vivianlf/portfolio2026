@@ -1,0 +1,158 @@
+{
+    "aboutMe": {
+        "en": {
+            "title": "About <strong>Me</strong>",
+            "text": "Growing up in a small coastal town in Brazil, I was always naturally curious and creative. Even with limited resources, at the age of 6, I received the best gift I have ever gotten from my father: <strong>a computer</strong>. That was when I discovered my <strong>passion</strong> for technology. Today, I am seeking an opportunity to continue developing my skills in an environment that challenges me and allows me to do what I love, which is <strong>creating</strong> technology-based solutions to solve <strong>real-world</strong> problems."
+        },
+        "fr": {
+            "title": "À propos de <strong>moi</strong>",
+            "text": "Ayant grandi dans une petite ville côtière au Brésil, j'ai toujours été d'un naturel curieux et créatif. Malgré des ressources limitées, j'ai reçu à l'âge de 6 ans le plus beau cadeau de la part de mon père : <strong>un ordinateur</strong>. C'est à ce moment-là que ma passion pour la technologie est née.<br/><br/>Aujourd'hui, je suis à la recherche d'une opportunité pour continuer à développer mes compétences dans un environnement stimulant. Mon objectif est de mettre ce que j'aime au service de l'innovation : <strong>créer</strong> des solutions technologiques pour résoudre des problèmes concrets."
+        }
+    },
+    "academic": {
+        "en": {
+            "title": "Academic <strong>Background</strong>"
+        },
+        "fr": {
+            "title": "Formation <strong>académique</strong>"
+        }
+    },
+    "experience": {
+        "en": {
+            "title": "Professional <strong>Experience</strong>"
+        },
+        "fr": {
+            "title": "Expérience <strong>professionnelle</strong>"
+        }
+    },
+    "blocks": {
+        "academic": {
+            "en": [
+                {
+                    "name": "University of Technology of Compiègne",
+                    "degree": "Computer Engineering",
+                    "period": "Feb 2026 – Present",
+                    "topics": [
+                        "Algorithmic complexity, Relational and non-relational databases, Data analysis, Combinatorial optimization"
+                    ]
+                },
+                {
+                    "name": "Federal University of Itajubá",
+                    "degree": "Computer Engineering",
+                    "period": "2021 – Present",
+                    "topics": [
+                        "OOP, Software Design, Design Patterns, Databases, ORM, Networks, Project Management",
+                        "OS, Embedded Systems, Microcontrollers, Electronics, Control Systems",
+                        "Linear Algebra, Data Analysis, TinyML, AI"
+                    ]
+                }
+            ],
+            "fr": [
+                {
+                    "name": "Université de Technologie de Compiègne",
+                    "degree": "Génie Informatique",
+                    "period": "Février 2026 – Présent",
+                    "topics": [
+                        "Complexité algorithmique, bases de données relationnelles et non relationnelles, optimisation combinatoire."
+                    ]
+                },
+                {
+                    "name": "Federal University of Itajubá",
+                    "degree": "Génie Informatique",
+                    "period": "2021 – Présent",
+                    "topics": [
+                        "POO, Conception logicielle, Design Patterns, Bases de données, ORM, Réseaux, Gestion de projet.",
+                        "Systèmes d’exploitation, Systèmes embarqués, Microcontrôleurs, Électronique, Systèmes de contrôle.",
+                        "Algèbre linéaire, Analyse de données, TinyML, IA."
+                    ]
+                }
+            ]
+        },
+        "experience": {
+            "en": [
+                {
+                    "name": "SDR Force",
+                    "degree": "Infrastructure and Automation Developer",
+                    "period": "Jul 2022 – Feb 2026",
+                    "topics": [
+                        "Reduced manual configuration latency by 62.5% through backend optimization.",
+                        "Automated server routines and mass mailing infrastructure using WHM/cPanel.",
+                        "Managed high-volume SMTP server operations and architected scalable technical documentation."
+                    ]
+                },
+                {
+                    "name": "Federal University of Itajubá",
+                    "degree": "Student Researcher",
+                    "period": "Aug 2024 – Jul 2025",
+                    "topics": [
+                        "Comparative study of JavaScript and WebAssembly for AI deployment, achieving up to 4.5× faster performance than JavaScript.",
+                        "Profiling latency and memory across different architectures to evaluate efficiency and portability."
+                    ]
+                },
+                {
+                    "name": "DAC",
+                    "degree": "Full Stack Developer Intern",
+                    "period": "Jul 2022 – Jul 2024",
+                    "topics": [
+                        "Developed web applications using PHP, HTML, CSS, JavaScript, and TypeScript.",
+                        "Contributed to a platform that helps women report domestic violence securely."
+                    ]
+                }
+            ],
+            "fr": [
+                {
+                    "name": "SDR Force",
+                    "degree": "Développeuse Infrastructure et Automatisation",
+                    "period": "06/2022 – 02/2026",
+                    "topics": [
+                        "Réduction de 62,5 % du temps de configuration manuelle grâce à l’optimisation du backend.",
+                        "Automatisation des routines serveur et de l’infrastructure d’envoi massif d’e-mails avec WHM/cPanel.",
+                        "Gestion d’opérations SMTP à fort volume et conception d’une documentation technique scalable."
+                    ]
+                },
+                {
+                    "name": "Federal University of Itajubá",
+                    "degree": "Chercheur Étudiant",
+                    "period": "08/2024 – 07/2025",
+                    "topics": [
+                        "Étude comparative de JavaScript et WebAssembly pour le déploiement d’IA, jusqu’à 4,5× plus rapide.",
+                        "Analyse de la latence et de la mémoire pour évaluer l’efficacité et la portabilité."
+                    ]
+                },
+                {
+                    "name": "DAC",
+                    "degree": "Stagiaire Développeuse Full Stack",
+                    "period": "07/2022 – 07/2024",
+                    "topics": [
+                        "Développement d’applications web avec PHP, HTML, CSS, JavaScript et TypeScript.",
+                        "Contribution à une plateforme sécurisée de signalement de violences domestiques."
+                    ]
+                }
+            ]
+        }
+    },
+    "freelancer": {
+        "en": {
+            "tag": "Let's work together",
+            "title": "Web <strong>Development</strong>",
+            "text1": "I've been working as a freelancer since the start of my university journey to help pay for my studies. Over the years, I've helped clients bring their ideas to life through design, web development, and automations.",
+            "text2": "<strong>Ready to create something great? </strong>Let's collaborate on a project."
+        },
+        "fr": {
+            "tag": "Travaillons ensemble",
+            "title": "Développement <strong>Web</strong>",
+            "text1": "Je travaille en freelance depuis le début de mon parcours universitaire pour financer mes études. Au fil des années, j'ai aidé mes clients à donner vie à leurs idées grâce au design, au développement web et à l'automatisation.",
+            "text2": "<strong>Prêt(e) à créer quelque chose d'exceptionnel ? </strong>Collaborons sur votre projet."
+        }
+    },
+    "footer": {
+        "en": {
+            "cta": "Get in touch",
+            "rights": "All rights reserved."
+        },
+        "fr": {
+            "cta": "Entrer en contact",
+            "rights": "Tous droits réservés."
+        }
+    }
+}

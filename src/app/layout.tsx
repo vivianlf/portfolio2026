@@ -1,22 +1,22 @@
-// app/layout.tsx
 import './globals.css';
-import Header from './components/header/header'; // seu Header
+import Header from './components/header/header'; 
+import Footer from './components/footer/footer'; 
+import { LangProvider } from './context/langContext';
 
 export const metadata = {
   title: 'Meu Portfólio',
   description: 'Portfólio da Vivian',
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body>
-        <Header /> {/* Header aparece em todas as páginas */}
-        {children} {/* Aqui entram todas as páginas */}
+        <LangProvider>
+          <Header /> 
+          {children} 
+          <Footer /> 
+        </LangProvider>
       </body>
     </html>
   );

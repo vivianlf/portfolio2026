@@ -2,21 +2,19 @@
 .container {
     width: 100%;
     overflow-x: hidden;
-    overflow-y: scroll;
     scroll-snap-type: y mandatory;
-    height: 100vh;
 }
 
 /* General slide container */
 .slide {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     align-items: flex-start;
-    justify-content: flex-start;
-    padding: 6rem 10%;
-    min-height: 100vh;
+    justify-content: center !important;
+    padding: 6rem;
+    height: auto;
     scroll-snap-align: start;
-    gap: 3rem;
+    gap: 0rem;
 }
 
 /* Slide with two columns (universities/professional experience) */
@@ -31,15 +29,56 @@
     flex: 1;
 }
 
+/* Slide title wrapper */
+.titleWrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.titleLine {
+    width: 5px;
+    height: 0;
+    background-color: #cb6ce6;
+    border-radius: 3px;
+    animation: growLine 0.6s ease forwards;
+}
+
+@keyframes growLine {
+    from {
+        height: 0;
+    }
+
+    to {
+        height: 4rem;
+    }
+}
+
 /* Slide title */
 .text h2 {
     font-size: 3rem;
     margin-bottom: 1rem;
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: fadeSlideIn 0.6s ease 0.3s forwards;
+}
+
+@keyframes fadeSlideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 /* Slide subtitle */
 .text .subtitle {
-    font-size: 1rem;
+    font-size: 1.5rem;
     color: #999;
     margin-bottom: 2rem;
     font-weight: 300;
@@ -47,9 +86,10 @@
 
 /* Paragraph text */
 .text p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     line-height: 1.7;
     color: #444;
+    text-align: justify;
 }
 
 /* Wrapper for images in slides */
@@ -59,7 +99,7 @@
     justify-content: center;
 }
 
-/* Image styling with optional modifier for bigger images */
+/* Image styling */
 .imageWrap img {
     width: 250px;
     height: 100%;
@@ -71,7 +111,7 @@
     width: 300px;
     height: 300px;
     border-radius: 50%;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
 }
 
 /* Slide with image on the right */
@@ -79,82 +119,439 @@
     flex-direction: row-reverse;
 }
 
-/* Container for multiple university/professional blocks */
+/* Container for multiple blocks */
 .universities {
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    justify-content: center;
+    gap: 1.5rem;
     width: 100%;
 }
 
-/* Single university/professional block */
+/* Single block */
 .university {
     display: flex;
     align-items: flex-start;
     gap: 2rem;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.5s ease forwards;
 }
 
-/* Reverse layout if image should be on the right */
+.university:nth-child(1) {
+    animation-delay: 0.5s;
+}
+
+.university:nth-child(2) {
+    animation-delay: 0.7s;
+}
+
+.university:nth-child(3) {
+    animation-delay: 0.9s;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .university.imageRight {
     flex-direction: row-reverse;
 }
 
-/* Text section inside a university/professional block */
 .uniText {
     flex: 2;
 }
 
-/* University/professional name */
 .uniName {
     font-weight: bold;
     font-size: 1.4rem;
     margin-bottom: 0.3rem;
 }
 
-/* Degree or position + period */
 .uniDegree {
-    font-size: 1rem;
-    font-weight: 300;
-    color: #6a0dad; /* purple */
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #cb6ce6;
+    background-color: rgba(203, 108, 230, 0.1);
+    padding: 0.2rem 0.7rem;
+    border-radius: 20px;
     margin-bottom: 0.5rem;
 }
 
-/* List of topics or responsibilities */
 .uniText ul {
     list-style: disc;
     padding-left: 1.5rem;
     line-height: 1.6;
 }
 
-/* Individual bullet item */
 .uniText ul li {
     font-size: 1.1rem;
     color: #444;
 }
 
-/* Container for social icons below About Me image */
+/* Social icons */
 .socialIcons {
     display: flex;
-    gap: 1rem;
+    gap: 0.5rem;
     margin-top: 2rem;
-    justify-content: center; /* centraliza abaixo da imagem */
-  }
-  
-  /* Icon styles */
-  .socialIcons a {
+    justify-content: center;
+}
+
+.socialIcons a {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 50px;
-    height: 50px;
+    width: 42px;
+    height: 42px;
     border-radius: 50%;
-    background-color: #6a0dad; /* violet */
+    background-color: #cb6ce6;
     color: #fff;
     font-size: 1.5rem;
     transition: background-color 0.3s, transform 0.3s;
-  }
-  
-  .socialIcons a:hover {
-    background-color: #4b0082; /* darker purple */
+}
+
+.socialIcons a:hover {
+    background-color: #b45cce;
     transform: translateY(-3px);
-  }
+}
+
+/* Thin divider between sections */
+.sectionDivider {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #e0e0e0 20%, #e0e0e0 80%, transparent);
+}
+
+/* =========================
+   FREELANCER SECTION
+========================= */
+.freelancerSlide {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6rem;
+    min-height: 100vh;
+    scroll-snap-align: start;
+    background-color: #111;
+    gap: 4rem;
+}
+
+.freelancerText {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.freelancerText h2 {
+    font-size: 3rem;
+    color: #fff;
+    margin: 0;
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: fadeSlideIn 0.6s ease 0.3s forwards;
+}
+
+.freelancerText .titleLine {
+    background-color: #cb6ce6;
+}
+
+.freelancerText p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #aaa;
+    max-width: 480px;
+}
+
+.freelancerTag {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #cb6ce6;
+    background-color: rgba(203, 108, 230, 0.12);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    width: fit-content;
+}
+
+.freelancerCards {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 0;
+    position: relative;
+}
+
+.clientCard {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.clientCard:not(:first-child) {
+    margin-left: -120px;
+}
+
+.clientCard:nth-child(1) {
+    transform: rotate(-8deg);
+    z-index: 1;
+}
+
+.clientCard:nth-child(2) {
+    transform: rotate(-3deg);
+    z-index: 2;
+}
+
+.clientCard:nth-child(3) {
+    transform: rotate(3deg);
+    z-index: 3;
+}
+
+.clientCard:nth-child(4) {
+    transform: rotate(8deg);
+    z-index: 4;
+}
+
+.clientBackground {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.65);
+}
+
+.clientContent {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clientLogo {
+    position: relative;
+    z-index: 2;
+    width: 120px;
+    height: auto;
+    object-fit: contain;
+}
+
+.freelancerCards:hover .clientCard {
+    transform: rotate(0deg) scale(0.95);
+}
+
+.freelancerCards:hover .clientCard:nth-child(1) {
+    transform: translateX(-140px) rotate(-6deg);
+}
+
+.freelancerCards:hover .clientCard:nth-child(2) {
+    transform: translateX(-50px) rotate(-2deg);
+}
+
+.freelancerCards:hover .clientCard:nth-child(3) {
+    transform: translateX(50px) rotate(2deg);
+}
+
+.freelancerCards:hover .clientCard:nth-child(4) {
+    transform: translateX(140px) rotate(6deg);
+}
+
+.clientCard:hover {
+    transform: translateY(-30px) scale(1.1) rotate(0deg) !important;
+    z-index: 10;
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.5);
+}
+
+/* =========================
+   TABLET (max 1024px)
+========================= */
+@media (max-width: 1024px) {
+    .slide {
+        padding: 4rem;
+    }
+
+
+    .text h2 {
+        font-size: 2.5rem;
+    }
+
+    /* Stack image below text */
+    .university {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+    }
+
+    .university.imageRight {
+        flex-direction: column;
+        padding-top: 2rem;
+    }
+
+    .imageWrap img {
+        width: 180px;
+    }
+
+    .freelancerSlide {
+        padding: 4rem;
+        gap: 2rem;
+    }
+
+    .freelancerText h2 {
+        font-size: 2.5rem;
+    }
+
+    /* Smaller cards on tablet */
+    .clientCard {
+        width: 180px;
+        height: 240px;
+    }
+
+    .clientCard:not(:first-child) {
+        margin-left: -90px;
+    }
+
+    /* Social icons */
+    .socialIcons {
+        display: flex;
+        gap: 0.5rem;
+        margin-top: 0.5rem;
+        justify-content: center;
+    }
+
+    .freelancerCards:hover .clientCard:nth-child(1) {
+        transform: translateX(-110px) rotate(-6deg);
+    }
+
+    .freelancerCards:hover .clientCard:nth-child(2) {
+        transform: translateX(-40px) rotate(-2deg);
+    }
+
+    .freelancerCards:hover .clientCard:nth-child(3) {
+        transform: translateX(40px) rotate(2deg);
+    }
+
+    .freelancerCards:hover .clientCard:nth-child(4) {
+        transform: translateX(110px) rotate(6deg);
+    }
+
+    .clientLogo {
+        width: 80px;
+        height: auto;
+    }
+}
+
+/* =========================
+   MOBILE (max 768px)
+========================= */
+@media (max-width: 768px) {
+    .slide {
+        padding: 2.5rem 1.5rem;
+    }
+
+    .twoColumns {
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .text h2 {
+        font-size: 2rem;
+    }
+
+    .text p,
+    .uniText ul li {
+        font-size: 1rem;
+    }
+
+    .uniName {
+        font-size: 1.2rem;
+    }
+
+    .imageWrap img.aboutMe {
+        width: 200px;
+        height: 200px;
+        margin-top: 2rem;
+    }
+
+    .socialIcons a {
+        width: 32px;
+        height: 32px;
+        font-size: 1rem;
+    }
+
+    /* Disable scroll snap on mobile for better UX */
+    .container {
+        scroll-snap-type: none;
+    }
+
+   
+    /* Freelancer: stack vertically, keep card fan */
+    .freelancerSlide {
+        flex-direction: column;
+        padding: 3rem 1.5rem;
+        min-height: auto;
+        gap: 3rem;
+    }
+
+    .freelancerText {
+        align-items: flex-start;
+        text-align: left;
+        width: 100%;
+    }
+
+    .freelancerText h2 {
+        font-size: 2rem;
+    }
+
+    .freelancerText p {
+        font-size: 1rem;
+        max-width: 100%;
+    }
+
+    /* Keep fan effect on mobile, smaller cards */
+    .freelancerCards {
+        width: 100%;
+        padding: 2.5rem 0;
+    }
+
+    .clientCard {
+        width: 130px;
+        height: 130px;
+    }
+
+    .clientCard:not(:first-child) {
+        margin-left: -60px;
+    }
+
+    .clientCard:nth-child(1) { transform: rotate(-8deg); z-index: 1; }
+    .clientCard:nth-child(2) { transform: rotate(-3deg); z-index: 2; }
+    .clientCard:nth-child(3) { transform: rotate(3deg);  z-index: 3; }
+    .clientCard:nth-child(4) { transform: rotate(8deg);  z-index: 4; }
+
+    .freelancerCards:hover .clientCard:nth-child(1) { transform: translateX(-80px)  rotate(-6deg); }
+    .freelancerCards:hover .clientCard:nth-child(2) { transform: translateX(-27px)  rotate(-2deg); }
+    .freelancerCards:hover .clientCard:nth-child(3) { transform: translateX(27px)   rotate(2deg);  }
+    .freelancerCards:hover .clientCard:nth-child(4) { transform: translateX(80px)   rotate(6deg);  }
+
+    .clientCard:hover {
+        transform: translateY(-15px) scale(1.08) rotate(0deg) !important;
+    }
+}

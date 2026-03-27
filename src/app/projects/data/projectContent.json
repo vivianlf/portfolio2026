@@ -1,0 +1,96 @@
+{
+    "projects": {
+      "en": {
+        "title": "Recent <strong>Projects</strong>",
+        "items": [
+          {
+            "name": "Cervical Lesion Detection",
+            "tag": "Ongoing Final Year Project",
+            "description": "Developed a multi-stage computer vision pipeline for classifying cervical Transformation Zones to assist in early cancer detection.",
+            "details": [
+              "Achieved 98% precision in Region of Interest detection using the YOLO architecture.",
+              "Implemented MobileNetV3 for transformation zone classification, reaching 80% accuracy for Edge AI deployment.",
+              "Currently developing segmentation models for the cervical os and lesion extension."
+            ],
+            "image": "/projects/cervical-lesion.jpg"
+          },
+          {
+            "name": "Recyclable Material Detection",
+            "tag": "TinyML & Embedded AI",
+            "description": "Designed an embedded image classification system for automatic waste sorting using Arduino Nano 33 BLE Sense.",
+            "details": [
+              "Collected and trained a custom dataset of recyclable items.",
+              "Optimized a MobileNetV1 model for embedded devices, achieving 80% accuracy running directly on a microcontroller."
+            ],
+            "image": "/projects/recyclable-material.jpg"
+          },
+          {
+            "name": "E-Waste Recycling Vision",
+            "tag": "Embedded Vision",
+            "description": "Embedded object detection and reasoning system for electronic waste sorting using Raspberry Pi 5.",
+            "details": [
+              "Integrated a YOLOv11 model with a Small Language Model (SLM).",
+              "Achieved ~19ms inference speed for real-time identification with local processing."
+            ],
+            "image": "/projects/e-waste-vision.jpg"
+          },
+          {
+            "name": "Server Administration Automation",
+            "tag": "Python Backend",
+            "description": "Python-based backend automation system for SDR Force to streamline server management.",
+            "details": [
+              "Automated high-frequency tasks including domain provisioning and DNS configuration.",
+              "Reduced manual configuration latency by 62.5% through optimized backend workflows."
+            ],
+            "image": "/projects/server-automation.jpg"
+          }
+        ]
+      },
+      "fr": {
+        "title": "Projets <strong>Récents</strong>",
+        "items": [
+          {
+            "name": "Détection de Lésions Cervicales",
+            "tag": "Projet de Fin d'Études en cours",
+            "description": "Développement d'un pipeline de vision par ordinateur multi-étapes pour la classification des zones de transformation cervicale afin d'aider au dépistage précoce du cancer.",
+            "details": [
+              "Précision de 98 % obtenue pour la détection des régions d'intérêt (RoI) via l'architecture YOLO.",
+              "Mise en œuvre de MobileNetV3 pour la classification, atteignant 80 % de précision pour un déploiement Edge AI.",
+              "Développement actuel de modèles de segmentation pour l'orifice cervical et l'extension des lésions."
+            ],
+            "image": "/projects/cervical-lesion.jpg"
+          },
+          {
+            "name": "Détection de Matériaux Recyclables",
+            "tag": "TinyML & IA Embarquée",
+            "description": "Conception d'un système embarqué de classification d'images pour le tri automatique des déchets via Arduino Nano 33 BLE Sense.",
+            "details": [
+              "Collecte et entraînement d'un dataset personnalisé d'objets recyclables.",
+              "Optimisation d'un modèle MobileNetV1 pour dispositifs embarqués, tournant directement sur microcontrôleur."
+            ],
+            "image": "/projects/recyclable-material.jpg"
+          },
+          {
+            "name": "Vision Embarquée pour l'E-Waste",
+            "tag": "Vision par Ordinateur",
+            "description": "Système de détection d'objets et de raisonnement pour le tri des déchets électroniques utilisant un Raspberry Pi 5.",
+            "details": [
+              "Intégration d'un modèle YOLOv11 avec um Small Language Model (SLM).",
+              "Vitesse d'inférence d'environ 19ms pour une identification en temps réel avec traitement local."
+            ],
+            "image": "/projects/e-waste-vision.jpg"
+          },
+          {
+            "name": "Automatisation d'Administration Serveur",
+            "tag": "Backend Python",
+            "description": "Système d'automatisation backend en Python pour optimiser la gestion des serveurs chez SDR Force.",
+            "details": [
+              "Automatisation de tâches récurrentes : provisionnement de domaines e configuration DNS.",
+              "Réduction de 62,5 % du temps de configuration manuelle grâce à l'optimisation des workflows."
+            ],
+            "image": "/projects/server-automation.jpg"
+          }
+        ]
+      }
+    }
+  }
