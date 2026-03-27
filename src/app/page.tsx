@@ -1,10 +1,10 @@
 'use client';
 import AboutMeSlide from './about/components/aboutMe';
 import BlockSlide from './about/components/aboutBlock';
-import styles from './styles/about.module.css';
-import profile from '../../../public/photoCV.jpg';
-import unifei from '../../../public/Logo UNIFEI.png';
-import utc from '../../../public/Logo UTC.svg';
+import styles from './about/styles/about.module.css';
+import profile from '../../public/photoCV.jpg';
+import unifei from '../../public/Logo UNIFEI.png';
+import utc from '../../public/Logo UTC.svg';
 import { FaEnvelope, FaPhone, FaLinkedin } from 'react-icons/fa';
 import { useLang } from './context/langContext';
 import content from './about/data/aboutContent.json';
