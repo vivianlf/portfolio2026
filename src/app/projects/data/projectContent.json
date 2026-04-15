@@ -4,13 +4,13 @@
         "title": "Recent <strong>Projects</strong>",
         "items": [
           {
-            "name": "Cervical Lesion Detection",
+            "name": "AI-Enhanced Colposcopy System",
             "tag": "Ongoing Final Year Project",
-            "description": "Developed a multi-stage computer vision pipeline for classifying cervical Transformation Zones to assist in early cancer detection.",
+            "description": "Developed a multi-stage computer vision pipeline for classifying cervical Transformation Zones (Types 1, 2, and 3) to assist in medical diagnosis.",
             "details": [
               "Achieved 98% precision in Region of Interest detection using the YOLO architecture.",
-              "Implemented MobileNetV3 for transformation zone classification, reaching 80% accuracy for Edge AI deployment.",
-              "Currently developing segmentation models for the cervical os and lesion extension."
+              "Implemented MobileNetV3 for transformation zone classification, reaching 79% accuracy.",
+              "Focused on data engineering for limited medical datasets and optimizing models for future Edge AI deployment on Raspberry Pi 5."
             ],
             "image": "/projects/cervical-lesion.jpg"
           },
@@ -50,13 +50,13 @@
         "title": "Projets <strong>Récents</strong>",
         "items": [
           {
-            "name": "Détection de Lésions Cervicales",
+            "name": "Système de Colposcopie Optimisé par l'IA",
             "tag": "Projet de Fin d'Études en cours",
-            "description": "Développement d'un pipeline de vision par ordinateur multi-étapes pour la classification des zones de transformation cervicale afin d'aider au dépistage précoce du cancer.",
+            "description": "Développement d'un pipeline de vision par ordinateur à plusieurs étapes pour la classification des zones de transformation cervicale (Types 1, 2 et 3) afin d'aider au diagnostic médical.",
             "details": [
               "Précision de 98 % obtenue pour la détection des régions d'intérêt (RoI) via l'architecture YOLO.",
-              "Mise en œuvre de MobileNetV3 pour la classification, atteignant 80 % de précision pour un déploiement Edge AI.",
-              "Développement actuel de modèles de segmentation pour l'orifice cervical et l'extension des lésions."
+              "Mise en œuvre de MobileNetV3 pour la classification, atteignant 79 % de précision.",
+              "Focus sur l'ingénierie des données pour des datasets médicaux limités et l'optimisation des modèles pour un futur déploiement Edge AI sur Raspberry Pi 5."
             ],
             "image": "/projects/cervical-lesion.jpg"
           },
